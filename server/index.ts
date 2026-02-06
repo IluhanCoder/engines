@@ -30,4 +30,6 @@ app.use(userController.auth);
 
 app.use(router);
 
-app.listen(5001, () => console.log("server has been started"));
+const PORT = process.env.PORT ? Number(process.env.PORT) : 5001;
+
+app.listen(PORT, () => console.log(`server has been started on port ${PORT}`));
